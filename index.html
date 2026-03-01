@@ -276,7 +276,19 @@ nav{
   padding:3px 10px;border-radius:4px;
   font-size:.67rem;font-weight:600;letter-spacing:.03em;
 }
-.badge-make{background:var(--purple-bg);color:var(--make);border:1px solid var(--purple-border)}
+.badge-hf{background:#fff7f0;color:#ff6b00;border:1px solid #ffd4a8}
+.badge-python{background:#eef6ff;color:#1d6fa4;border:1px solid #bfdbfe}
+.live-demo-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 18px;border-radius:8px;
+  background:var(--ink);color:#fff;
+  font-size:.75rem;font-weight:600;
+  text-decoration:none;
+  transition:opacity .15s;
+  margin-top:16px;
+}
+.live-demo-btn:hover{opacity:.8}
+.live-demo-btn span{font-size:.9rem}
 .badge-zapier{background:#fff7f5;color:var(--zapier);border:1px solid #ffcbb5}
 .badge-ai{background:#fef9ee;color:#92400e;border:1px solid #fde68a}
 .badge-status{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border)}
@@ -480,7 +492,106 @@ footer{
 }
 .footer-note{font-size:.75rem;color:var(--faint)}
 
-/* ── ANIMATIONS ── */
+/* ── WORKFLOW DIAGRAM ── */
+.wf-diagram{
+  border-top:1px solid var(--border);
+  padding:32px 36px;
+  background:var(--bg);
+}
+.featured .wf-diagram{padding:32px 48px}
+.wf-diagram-title{
+  font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:24px;
+  display:flex;align-items:center;gap:10px;
+}
+.wf-diagram-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* vertical steps container */
+.wf-steps{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+  max-width:480px;
+}
+.featured .wf-steps{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  column-gap:48px;
+  max-width:100%;
+  align-items:start;
+}
+.wf-step{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  position:relative;
+}
+.wf-step-left{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  flex-shrink:0;
+}
+.wf-step-icon-wrap{
+  width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+  border:1.5px solid var(--border);
+  background:var(--surface);
+  position:relative;
+  flex-shrink:0;
+}
+.wf-step-icon-wrap.ai{
+  background:#fef9ee;border-color:#fde68a;
+  box-shadow:0 0 0 3px rgba(180,83,9,.05);
+}
+.wf-step-icon-wrap.trigger{
+  background:var(--green-bg);border-color:var(--green-border);
+}
+.wf-step-icon-wrap.output{
+  background:var(--blue-bg);border-color:var(--blue-border);
+}
+.wf-step-icon-wrap.manager{
+  background:#fef2f2;border-color:#fecaca;
+}
+.wf-step-icon-wrap.router{
+  background:var(--purple-bg);border-color:var(--purple-border);
+}
+.wf-step-num{
+  position:absolute;top:-6px;left:-6px;
+  width:16px;height:16px;border-radius:50%;
+  background:var(--ink);color:#fff;
+  font-size:.55rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.wf-v-line{
+  width:2px;height:28px;
+  background:var(--border2);
+  margin:4px 0;
+  margin-left:21px;
+}
+.wf-step-content{
+  padding-bottom:4px;
+  padding-top:4px;
+}
+.wf-step-label{
+  font-size:.8rem;font-weight:600;color:var(--ink);
+  line-height:1.3;margin-bottom:2px;
+}
+.wf-step-label.ai-label{color:var(--amber)}
+.wf-step-label.make-label{color:var(--make)}
+.wf-step-label.red-label{color:var(--red)}
+.wf-step-sub{
+  font-size:.72rem;color:var(--muted);
+  line-height:1.4;
+}
+.wf-connector-label{
+  font-size:.62rem;color:var(--faint);
+  margin-left:21px;
+  margin-bottom:2px;
+  font-style:italic;
+}
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(18px)}
   to{opacity:1;transform:translateY(0)}
@@ -507,6 +618,118 @@ footer{
   .footer-inner{padding:0 24px;flex-direction:column;gap:8px;text-align:center}
   .filter-bar{display:none}
 }
+/* ── HIRE BANNER ── */
+.hire-banner{
+  background:linear-gradient(90deg,#0f0f0f 0%,#1a1a2e 100%);
+  color:#fff;text-align:center;
+  padding:10px 20px;font-size:.75rem;
+  font-weight:500;letter-spacing:.04em;
+  position:relative;z-index:200;
+}
+.hire-banner a{
+  color:#a5f3fc;text-decoration:none;
+  font-weight:700;margin-left:6px;
+  border-bottom:1px solid rgba(165,243,252,.4);
+  transition:border-color .15s;
+}
+.hire-banner a:hover{border-color:#a5f3fc}
+.hire-banner-dot{
+  display:inline-block;width:7px;height:7px;
+  border-radius:50%;background:#4ade80;
+  margin-right:8px;animation:blink 2s ease infinite;
+  vertical-align:middle;position:relative;top:-1px;
+}
+
+/* ── HERO NAME GRADIENT ── */
+.hero-name-gradient{
+  background:linear-gradient(120deg,#0f0f0f 0%,#0f0f0f 45%,#6d28d9 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* ── HERO ICON ROW ── */
+.hero-icon-row{
+  display:flex;align-items:center;gap:0;
+  margin-bottom:28px;
+}
+.hero-icon-node{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .2s, box-shadow .2s;
+  cursor:default;
+}
+.hero-icon-node:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.1);
+}
+.hero-icon-ai{
+  background:#fef9ee;border-color:#fde68a;
+  box-shadow:0 0 0 4px rgba(180,83,9,.05);
+}
+.hero-icon-connector{
+  width:28px;height:2px;
+  background:linear-gradient(90deg,var(--border),var(--border2));
+  position:relative;
+}
+.hero-icon-connector::after{
+  content:'';position:absolute;
+  right:-4px;top:-3px;
+  border:4px solid transparent;
+  border-left-color:var(--border2);
+}
+
+/* ── HERO INTRO PILL ── */
+.hero-intro-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.78rem;font-weight:600;color:var(--make);
+  background:var(--purple-bg);border:1px solid var(--purple-border);
+  border-radius:100px;padding:5px 14px;margin-bottom:18px;
+}
+.hero-intro-pill::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--make);flex-shrink:0;
+}
+
+/* ── TYPEWRITER STRIP ── */
+.typewriter-strip{
+  display:flex;align-items:center;gap:8px;
+  font-size:.88rem;color:var(--muted);
+  font-weight:400;margin-bottom:24px;
+}
+.tw-prefix{color:var(--ink);font-weight:600}
+.tw-text{
+  color:var(--make);font-weight:600;
+  border-right:2px solid var(--make);
+  padding-right:2px;white-space:nowrap;
+  animation:cursor-blink .7s step-end infinite;
+}
+@keyframes cursor-blink{
+  0%,100%{border-color:var(--make)}
+  50%{border-color:transparent}
+}
+
+/* ── CARD TOOL ACCENT BORDERS ── */
+.p-card[data-tool="zapier"]{border-top:3px solid var(--zapier)}
+.p-card[data-tool="make"]{border-top:3px solid var(--make)}
+.p-card[data-tool="none"]{border-top:3px solid #ff6b00}
+
+/* ── SCROLL FADE-IN ── */
+.p-card{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .55s ease, transform .55s ease,
+    border-color .2s, box-shadow .2s, transform .2s;
+}
+.p-card.visible{opacity:1;transform:translateY(0)}
+.p-card:hover{
+  border-color:var(--border2);
+  box-shadow:0 10px 48px rgba(0,0,0,.08);
+}
+.p-card[data-tool="zapier"]:hover{box-shadow:0 10px 48px rgba(255,74,0,.08)}
+.p-card[data-tool="make"]:hover{box-shadow:0 10px 48px rgba(109,40,217,.08)}
+
 </style>
 </head>
 <body>
@@ -524,7 +747,7 @@ footer{
       </div>
       <div class="nav-status">
         <span class="nav-status-dot"></span>
-        Open to conversations
+        Building in public
       </div>
     </div>
   </div>
@@ -533,8 +756,37 @@ footer{
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <h1 class="hero-name">Badri</h1>
+
+    <div class="hero-icon-row">
+      <div class="hero-icon-node" title="Make.com">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#6d28d9" stroke-width="1.5"/><path d="M8 12h8M12 8l4 4-4 4" stroke="#6d28d9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="hero-icon-connector"></div>
+      <div class="hero-icon-node hero-icon-ai" title="AI">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#b45309" stroke="#b45309" stroke-width="0.5" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="hero-icon-connector"></div>
+      <div class="hero-icon-node" title="Zapier">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#ff4a00" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#ff4a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="hero-icon-connector"></div>
+      <div class="hero-icon-node" title="HubSpot">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#dc2626"/><circle cx="12" cy="5" r="2" stroke="#dc2626" stroke-width="1.5"/><circle cx="19" cy="16" r="2" stroke="#dc2626" stroke-width="1.5"/><circle cx="5" cy="16" r="2" stroke="#dc2626" stroke-width="1.5"/><path d="M12 7v5M17.5 14.5l-3.5-2M6.5 14.5l3.5-2" stroke="#dc2626" stroke-width="1.2"/></svg>
+      </div>
+      <div class="hero-icon-connector"></div>
+      <div class="hero-icon-node" title="Slack">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="4" height="8" rx="2" fill="#4a154b"/><rect x="9" y="3" width="4" height="8" rx="2" fill="#4a154b"/><rect x="9" y="13" width="4" height="8" rx="2" fill="#4a154b"/><rect x="15" y="8" width="4" height="8" rx="2" fill="#4a154b"/></svg>
+      </div>
+    </div>
+
+    <h1 class="hero-name hero-name-gradient">Badri</h1>
     <div class="hero-name-sub">Narayanan</div>
+
+    <div class="typewriter-strip">
+      <span class="tw-prefix">I automate</span>
+      <span class="tw-text" id="tw"></span>
+    </div>
+
     <div class="hero-overline">
       <span class="hero-overline-dash"></span>
       Sales, Business Operations & AI Automation
@@ -570,11 +822,11 @@ footer{
           <div class="stat-l">Years Experience</div>
         </div>
         <div class="stat-item">
-          <div class="stat-n">6</div>
-          <div class="stat-l">Live Automations</div>
+          <div class="stat-n">7</div>
+          <div class="stat-l">Live Projects</div>
         </div>
         <div class="stat-item">
-          <div class="stat-n">2</div>
+          <div class="stat-n">3</div>
           <div class="stat-l">Platforms Mastered</div>
         </div>
         <div class="stat-item">
@@ -599,11 +851,11 @@ footer{
 <!-- PROJECTS -->
 <section class="section" id="projects">
   <div class="sec-label">What I've built</div>
-  <h2 class="sec-title">Six workflows. Real problems solved.</h2>
-  <p style="font-size:.95rem;color:var(--muted);line-height:1.75;max-width:600px;margin-bottom:40px;margin-top:-24px">Three built on Make.com. Three on Zapier. Two use live AI steps. All of them solve a specific, real problem — not a tutorial exercise.</p>
+  <h2 class="sec-title">Seven workflows. Real problems solved.</h2>
+  <p style="font-size:.95rem;color:var(--muted);line-height:1.75;max-width:600px;margin-bottom:40px;margin-top:-24px">Three built on Make.com. Three on Zapier. One built with Python and deployed on HuggingFace. Two use live AI steps. All of them solve a specific, real problem — not a tutorial exercise.</p>
 
   <div class="filter-bar">
-    <button class="filter-btn active-all" onclick="filterProjects('all',this)">Show all six</button>
+    <button class="filter-btn active-all" onclick="filterProjects('all',this)">Show all seven</button>
     <button class="filter-btn" onclick="filterProjects('make',this)">Make.com only</button>
     <button class="filter-btn" onclick="filterProjects('zapier',this)">Zapier only</button>
   </div>
@@ -682,6 +934,70 @@ footer{
           <div><div class="fns-label">Slack</div><div class="fns-sub">Team Alert</div></div>
         </div>
       </div>
+      <div class="wf-diagram">
+        <div class="wf-diagram-title">Workflow Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>📋</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Form</div>
+              <div class="wf-step-sub">Customer submits property type, materials, finishes and add-ons</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap"><span class="wf-step-num">2</span>📊</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Sheets</div>
+              <div class="wf-step-sub">Zapier looks up material price, finish price and add-on costs from pricing engine</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap ai"><span class="wf-step-num">3</span>✦</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label ai-label">AI by Zapier</div>
+              <div class="wf-step-sub">Generates two complete quotes — Budget (MDF + Laminate) and Standard (HDHMR + High Gloss) with GST and payment terms</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap"><span class="wf-step-num">4</span>📄</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Docs</div>
+              <div class="wf-step-sub">Formatted quote document created automatically in AI_Interior_Quotes folder</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">5</span>📧</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Gmail</div>
+              <div class="wf-step-sub">Customer receives branded email with full quote and Google Doc link</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">6</span>💬</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Slack</div>
+              <div class="wf-step-sub">Sales team notified with customer details, quote summary and follow-up reminder</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="impact-row cols-3">
         <div class="impact-cell">
           <span class="ic-icon">⚡</span>
@@ -698,12 +1014,128 @@ footer{
       </div>
     </div>
 
-    <!-- ── PROJECT 2 — FEATURED — AI EMAIL SUMMARIZER ── -->
+    <!-- ── PROJECT 2 — FEATURED — INTERIOASSIST AI ── -->
+    <div class="p-card featured" data-tool="none">
+      <div class="p-card-top">
+        <div class="featured-left">
+          <div class="p-card-meta">
+            <div class="p-card-num">Project 02 · Python · HuggingFace · Flagship</div>
+            <div class="p-card-badges">
+              <span class="tool-badge badge-hf">HuggingFace</span>
+              <span class="tool-badge badge-python">Python</span>
+              <span class="tool-badge badge-ai">✦ AI Step</span>
+              <span class="tool-badge badge-status">Live</span>
+            </div>
+          </div>
+          <div class="p-card-title">InterioAssist AI —<br>Dual-Domain AI Assistant</div>
+          <div class="p-card-desc">
+            A production-ready AI assistant built with Python, Groq's Llama-3.1 model, and a custom Gradio UI — deployed live on HuggingFace Spaces. It handles two expert domains in one interface: interior design guidance (layouts, materials, Vastu, budgets) and sales performance analytics (funnel analysis, conversion rates, team improvement). This is not a tutorial project. It is a fully deployed, publicly accessible AI product.
+          </div>
+          <div class="p-card-tools">
+            <span class="p-tool">Python</span>
+            <span class="p-tool">Groq API</span>
+            <span class="p-tool">Llama-3.1</span>
+            <span class="p-tool">Gradio UI</span>
+            <span class="p-tool">HuggingFace Spaces</span>
+            <span class="p-tool">Prompt Engineering</span>
+          </div>
+          <a href="https://huggingface.co/spaces/Badrii5/interioassist-ai" target="_blank" class="live-demo-btn">
+            <span>🚀</span> View Live Demo
+          </a>
+        </div>
+        <div class="featured-right">
+          <div>
+            <div style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:10px">The problem it solves</div>
+            <p style="font-size:.85rem;color:var(--muted);line-height:1.7">Interior design sales teams spend hours answering repetitive customer queries — material costs, room layout ideas, Vastu rules, budget tiers. At the same time, sales managers lack a fast way to analyse team performance and conversion data. This assistant handles both. One AI, two expert domains, deployed as a live product anyone can use.</p>
+          </div>
+          <div style="margin-top:24px;padding:20px;background:var(--surface2);border-radius:12px;border:1px solid var(--border)">
+            <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:12px">What makes this advanced</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)"><span style="color:var(--amber)">✦</span> Custom system prompt — dual-domain expert logic engineered from scratch</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)"><span style="color:var(--amber)">✦</span> Groq API integrated — fast, low-latency Llama-3.1 inference</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)"><span style="color:var(--amber)">✦</span> Deployed live on HuggingFace — public URL, auto-rebuild on commit</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)"><span style="color:var(--amber)">✦</span> Full chat memory — history passed correctly to model each turn</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)"><span style="color:var(--amber)">✦</span> Indian home context — Vastu rules, local material names, INR pricing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-diagram">
+        <div class="wf-diagram-title">Architecture Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>💬</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">User Input</div>
+              <div class="wf-step-sub">Customer or sales manager types a query — interior design question or sales performance request</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap"><span class="wf-step-num">2</span>🖥</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Gradio Frontend</div>
+              <div class="wf-step-sub">Custom dark-theme UI captures input and chat history — built with Gradio Blocks</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap"><span class="wf-step-num">3</span>🐍</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Python Query Handler</div>
+              <div class="wf-step-sub">Converts history, injects system prompt, structures the full message payload for the model</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap ai"><span class="wf-step-num">4</span>✦</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label ai-label">Groq API — Llama-3.1</div>
+              <div class="wf-step-sub">Model receives dual-domain system prompt + user message — generates structured expert response at low latency</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">5</span>📤</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Response Displayed</div>
+              <div class="wf-step-sub">Clean structured output shown in UI — bullet points, pricing tiers, layout plans, or sales insights depending on query</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="impact-row cols-3">
+        <div class="impact-cell">
+          <span class="ic-icon">✦</span>
+          <div><div class="ic-num">2</div><div class="ic-lbl">Expert domains in one AI system</div></div>
+        </div>
+        <div class="impact-cell">
+          <span class="ic-icon">🚀</span>
+          <div><div class="ic-num">Live</div><div class="ic-lbl">Deployed on HuggingFace — public URL</div></div>
+        </div>
+        <div class="impact-cell">
+          <span class="ic-icon">⚡</span>
+          <div><div class="ic-num">Groq</div><div class="ic-lbl">Low-latency Llama-3.1 inference</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 3 — FEATURED — AI EMAIL SUMMARIZER ── -->
     <div class="p-card featured" data-tool="zapier">
       <div class="p-card-top">
         <div class="featured-left">
           <div class="p-card-meta">
-            <div class="p-card-num">Project 02 · Zapier · Featured</div>
+            <div class="p-card-num">Project 03 · Zapier · Featured</div>
             <div class="p-card-badges">
               <span class="tool-badge badge-zapier">Zapier</span>
               <span class="tool-badge badge-ai">✦ AI Step</span>
@@ -752,6 +1184,40 @@ footer{
           <div><div class="fns-label">Notion</div><div class="fns-sub">Create Data Source Item</div></div>
         </div>
       </div>
+      <div class="wf-diagram">
+        <div class="wf-diagram-title">Workflow Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>📧</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Gmail</div>
+              <div class="wf-step-sub">New email arrives in inbox — triggers the workflow instantly</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap ai"><span class="wf-step-num">2</span>✦</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label ai-label">AI by Zapier</div>
+              <div class="wf-step-sub">Reads full email body, identifies key information and action items, generates a clean structured summary</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">3</span>📓</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Notion</div>
+              <div class="wf-step-sub">Summary saved as a structured database entry — searchable and organised</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="impact-row cols-3">
         <div class="impact-cell">
           <span class="ic-icon">✦</span>
@@ -768,76 +1234,24 @@ footer{
       </div>
     </div>
 
-    <!-- ── PROJECT 2 — HALF — SMART LEAD ROUTING ── -->
+    <!-- ── PROJECT 3 — HALF — AUTOMOTIVE LEAD DISTRIBUTION ── -->
     <div class="p-card half" data-tool="make">
       <div class="p-card-top">
         <div class="p-card-meta">
-          <div class="p-card-num">Project 02 · Make.com</div>
+          <div class="p-card-num">Project 04 · Make.com · Enterprise</div>
           <div class="p-card-badges">
             <span class="tool-badge badge-make">Make.com</span>
             <span class="tool-badge badge-status">Live</span>
           </div>
         </div>
-        <div class="p-card-title">Smart Lead Routing<br>to CRM & Slack</div>
-        <div class="p-card-desc">Leads are read by a router that checks experience center and budget — then routed to the correct Slack team channel and auto-created as a HubSpot contact. Four routing conditions. Zero manual decisions.</div>
-        <div class="router-visual">
-          <div class="rv-title">Where each lead goes, based on location and budget</div>
-          <div class="rv-routes">
-            <div class="rv-route">
-              <span class="rv-cond rvc-green">Anna Nagar · Select</span>
-              <span class="rv-arr">→</span>
-              <span class="rv-dest"><strong>#annanagar-select</strong> + HubSpot</span>
-            </div>
-            <div class="rv-route">
-              <span class="rv-cond rvc-amber">Anna Nagar · Vesta</span>
-              <span class="rv-arr">→</span>
-              <span class="rv-dest"><strong>#annanagar-vesta</strong> + HubSpot</span>
-            </div>
-            <div class="rv-route">
-              <span class="rv-cond rvc-blue">OMR · Select</span>
-              <span class="rv-arr">→</span>
-              <span class="rv-dest"><strong>#omr-select</strong> + HubSpot</span>
-            </div>
-            <div class="rv-route">
-              <span class="rv-cond rvc-purple">OMR · Vesta</span>
-              <span class="rv-arr">→</span>
-              <span class="rv-dest"><strong>#omr-vesta</strong> + HubSpot</span>
-            </div>
-          </div>
+        <div class="p-card-title">Automotive Lead<br>Distribution System</div>
+        <div class="p-card-desc">In a busy dealership, every minute a lead sits unassigned is a lost sale. This workflow reads the vehicle type from a new lead entry and instantly routes it to the right specialist team on Slack — while copying the branch manager on every single lead through a private channel, without the sales floor knowing.</div>
+        <div style="margin-top:16px;padding:16px;background:var(--surface2);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:10px">The problem it solves</div>
+          <p style="font-size:.78rem;color:var(--muted);line-height:1.6">Walk-in leads were being manually assigned — wrong vehicle type reaching the wrong consultant, delays in response, no visibility for management. This automation removes all of that. Lead comes in, route fires, right team gets it, manager sees it — in seconds.</p>
         </div>
-        <div class="p-card-tools" style="margin-top:16px">
-          <span class="p-tool">Google Sheets</span>
-          <span class="p-tool">Make.com Router</span>
-          <span class="p-tool">Slack</span>
-          <span class="p-tool">HubSpot CRM</span>
-        </div>
-      </div>
-      <div class="impact-row cols-2">
-        <div class="impact-cell">
-          <span class="ic-icon">🎯</span>
-          <div><div class="ic-num">4</div><div class="ic-lbl">Routing conditions</div></div>
-        </div>
-        <div class="impact-cell">
-          <span class="ic-icon">🗂</span>
-          <div><div class="ic-num">Auto</div><div class="ic-lbl">CRM contact created</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── PROJECT 3 — HALF — TATA MOTORS ── -->
-    <div class="p-card half" data-tool="make">
-      <div class="p-card-top">
-        <div class="p-card-meta">
-          <div class="p-card-num">Project 03 · Make.com · Enterprise</div>
-          <div class="p-card-badges">
-            <span class="tool-badge badge-make">Make.com</span>
-            <span class="tool-badge badge-status">Live</span>
-          </div>
-        </div>
-        <div class="p-card-title">Tata Motors<br>Lead Distribution</div>
-        <div class="p-card-desc">Routes automotive leads by vehicle type to specialist Slack teams. A parallel private channel keeps the branch manager informed on every lead — without disrupting the sales floor.</div>
-        <div class="router-visual">
-          <div class="rv-title">Routed by vehicle type — specialist team gets the right lead, branch manager sees everything</div>
+        <div class="router-visual" style="margin-top:14px">
+          <div class="rv-title">Routed by vehicle type — specialist team gets the right lead, manager sees everything</div>
           <div class="rv-routes">
             <div class="rv-route">
               <span class="rv-cond rvc-blue">Passenger Vehicle</span>
@@ -857,7 +1271,7 @@ footer{
             <div class="rv-route">
               <span class="rv-cond rvc-red">All Leads 🔒</span>
               <span class="rv-arr">→</span>
-              <span class="rv-dest"><strong>#branchmanager-new-leads</strong></span>
+              <span class="rv-dest"><strong>#branchmanager-new-leads</strong> (private)</span>
             </div>
           </div>
         </div>
@@ -868,99 +1282,302 @@ footer{
           <span class="p-tool">Private Channel</span>
         </div>
       </div>
+      <div class="wf-diagram">
+        <div class="wf-diagram-title">Workflow Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>📊</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Sheets</div>
+              <div class="wf-step-sub">New lead row added — triggers the scenario immediately</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap router"><span class="wf-step-num">2</span>⑂</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label make-label">Make.com Router</div>
+              <div class="wf-step-sub">Reads vehicle type — evaluates 3 routing conditions and directs accordingly</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">3</span>💬</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Specialist Slack Channel</div>
+              <div class="wf-step-sub">#team-passenger / #team-commercial / #team-electric — right lead, right team</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap manager"><span class="wf-step-num">4</span>🔒</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label red-label">Private Manager Channel</div>
+              <div class="wf-step-sub">#branchmanager-new-leads — every lead silently copied for full management visibility</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="impact-row cols-2">
         <div class="impact-cell">
           <span class="ic-icon">🚗</span>
-          <div><div class="ic-num">3</div><div class="ic-lbl">Specialist teams routed</div></div>
+          <div><div class="ic-num">3</div><div class="ic-lbl">Specialist teams auto-routed</div></div>
         </div>
         <div class="impact-cell">
           <span class="ic-icon">🔒</span>
-          <div><div class="ic-num">Live</div><div class="ic-lbl">Management visibility</div></div>
+          <div><div class="ic-num">Live</div><div class="ic-lbl">Real-time management visibility</div></div>
         </div>
       </div>
     </div>
 
-    <!-- ── PROJECT 4 — THIRD — LEAD CAPTURE ── -->
+    <!-- ── PROJECT 4 — HALF — SMART LEAD ROUTING ── -->
+    <div class="p-card half" data-tool="make">
+      <div class="p-card-top">
+        <div class="p-card-meta">
+          <div class="p-card-num">Project 05 · Make.com</div>
+          <div class="p-card-badges">
+            <span class="tool-badge badge-make">Make.com</span>
+            <span class="tool-badge badge-status">Live</span>
+          </div>
+        </div>
+        <div class="p-card-title">Smart Lead Routing<br>to CRM & Slack</div>
+        <div class="p-card-desc">Interior design leads from two experience centers were landing in a single shared inbox — wrong consultant, delayed responses, no CRM record. This workflow reads the city and budget from every new lead, routes it to the correct team channel, and auto-creates the contact in HubSpot with zero manual input.</div>
+        <div style="margin-top:16px;padding:16px;background:var(--surface2);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:10px">The problem it solves</div>
+          <p style="font-size:.78rem;color:var(--muted);line-height:1.6">In a multi-branch interior design operation, leads from two experience centers were being manually forwarded. Budget-based team assignment (Premium vs Standard) was guesswork. This router automates both decisions simultaneously — team gets the lead, CRM gets the contact, in one flow.</p>
+        </div>
+        <div class="router-visual" style="margin-top:14px">
+          <div class="rv-title">Where each lead goes, based on location and budget</div>
+          <div class="rv-routes">
+            <div class="rv-route">
+              <span class="rv-cond rvc-green">Center A · Premium</span>
+              <span class="rv-arr">→</span>
+              <span class="rv-dest"><strong>#center-a-premium</strong> + HubSpot</span>
+            </div>
+            <div class="rv-route">
+              <span class="rv-cond rvc-amber">Center A · Standard</span>
+              <span class="rv-arr">→</span>
+              <span class="rv-dest"><strong>#center-a-standard</strong> + HubSpot</span>
+            </div>
+            <div class="rv-route">
+              <span class="rv-cond rvc-blue">Center B · Premium</span>
+              <span class="rv-arr">→</span>
+              <span class="rv-dest"><strong>#center-b-premium</strong> + HubSpot</span>
+            </div>
+            <div class="rv-route">
+              <span class="rv-cond rvc-purple">Center B · Standard</span>
+              <span class="rv-arr">→</span>
+              <span class="rv-dest"><strong>#center-b-standard</strong> + HubSpot</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-card-tools" style="margin-top:16px">
+          <span class="p-tool">Google Sheets</span>
+          <span class="p-tool">Make.com Router</span>
+          <span class="p-tool">Slack</span>
+          <span class="p-tool">HubSpot CRM</span>
+        </div>
+      </div>
+      <div class="wf-diagram">
+        <div class="wf-diagram-title">Workflow Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>📊</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Sheets</div>
+              <div class="wf-step-sub">New lead row added — scenario triggers immediately</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap router"><span class="wf-step-num">2</span>⑂</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label make-label">Make.com Router</div>
+              <div class="wf-step-sub">Checks experience center (A / B) and budget tier (Premium / Standard) — 4 conditions evaluated</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">3</span>💬</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Correct Slack Channel</div>
+              <div class="wf-step-sub">Right team alerted instantly — #center-a-premium / #center-a-standard / #center-b-premium / #center-b-standard</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">4</span>🗂</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">HubSpot CRM</div>
+              <div class="wf-step-sub">Contact auto-created with budget tag and team assignment — no manual CRM entry</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="impact-row cols-2">
+        <div class="impact-cell">
+          <span class="ic-icon">🎯</span>
+          <div><div class="ic-num">4</div><div class="ic-lbl">Routing conditions automated</div></div>
+        </div>
+        <div class="impact-cell">
+          <span class="ic-icon">🗂</span>
+          <div><div class="ic-num">Auto</div><div class="ic-lbl">CRM contact created instantly</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 5 — THIRD — LEAD CAPTURE ── -->
     <div class="p-card third" data-tool="make">
       <div class="p-card-top">
         <div class="p-card-meta">
-          <div class="p-card-num">Project 04 · Make.com</div>
+          <div class="p-card-num">Project 06 · Make.com</div>
           <div class="p-card-badges">
             <span class="tool-badge badge-make">Make.com</span>
+            <span class="tool-badge badge-status">Live</span>
           </div>
         </div>
         <div class="p-card-title">Lead Capture &<br>Auto-Notification</div>
-        <div class="p-card-desc">New lead in Google Sheets → Slack team alert fires → lead gets a Gmail confirmation. Fully automatic, zero manual steps.</div>
-        <div class="p-card-tools" style="margin-top:auto;padding-top:16px">
+        <div class="p-card-desc">Every new lead entering the Google Sheet triggers two actions simultaneously — the sales team gets a Slack alert within seconds, and the lead receives an automatic Gmail confirmation. No manual follow-up needed on either end.</div>
+        <div style="margin-top:14px;padding:14px;background:var(--surface2);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:8px">The problem it solves</div>
+          <p style="font-size:.76rem;color:var(--muted);line-height:1.6">Leads were sitting in a sheet unnoticed for hours. No one was notified. No confirmation was sent to the customer. This workflow fixes both — team knows instantly, lead feels attended to immediately.</p>
+        </div>
+        <div class="p-card-tools" style="margin-top:16px">
           <span class="p-tool">Google Sheets</span>
           <span class="p-tool">Slack</span>
           <span class="p-tool">Gmail</span>
         </div>
       </div>
-      <div class="p-card-flow" style="padding:16px 24px">
-        <div class="flow-node-sm"><span class="fns-icon">📊</span><div><div class="fns-label">Sheets</div></div></div>
-        <div class="flow-arr">→</div>
-        <div class="flow-node-sm"><span class="fns-icon">💬</span><div><div class="fns-label">Slack</div></div></div>
-        <div class="flow-arr">→</div>
-        <div class="flow-node-sm"><span class="fns-icon">📧</span><div><div class="fns-label">Gmail</div></div></div>
+      <div class="wf-diagram" style="padding:20px 24px">
+        <div class="wf-diagram-title">Workflow Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>📊</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Sheets</div>
+              <div class="wf-step-sub">New lead row added — triggers instantly</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap"><span class="wf-step-num">2</span>💬</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Slack</div>
+              <div class="wf-step-sub">Sales team alerted in under 5 seconds</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">3</span>📧</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Gmail</div>
+              <div class="wf-step-sub">Lead receives confirmation email automatically</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="impact-row cols-2">
         <div class="impact-cell" style="padding:16px 20px">
           <span class="ic-icon">⚡</span>
-          <div><div class="ic-num" style="font-size:1.1rem">&lt;5s</div><div class="ic-lbl">Alert time</div></div>
+          <div><div class="ic-num" style="font-size:1.1rem">&lt;5s</div><div class="ic-lbl">Team alert time</div></div>
         </div>
         <div class="impact-cell" style="padding:16px 20px">
           <span class="ic-icon">✅</span>
-          <div><div class="ic-num" style="font-size:1.1rem">100%</div><div class="ic-lbl">Auto-confirmed</div></div>
+          <div><div class="ic-num" style="font-size:1.1rem">100%</div><div class="ic-lbl">Leads auto-confirmed</div></div>
         </div>
       </div>
     </div>
 
-    <!-- ── PROJECT 5 — THIRD — CONSULTATION CALENDAR ── -->
+    <!-- ── PROJECT 6 — THIRD — CONSULTATION CALENDAR ── -->
     <div class="p-card third" data-tool="zapier">
       <div class="p-card-top">
         <div class="p-card-meta">
-          <div class="p-card-num">Project 05 · Zapier</div>
+          <div class="p-card-num">Project 07 · Zapier</div>
           <div class="p-card-badges">
             <span class="tool-badge badge-zapier">Zapier</span>
+            <span class="tool-badge badge-status">Live</span>
           </div>
         </div>
         <div class="p-card-title">Auto Calendar Event<br>on Consultation</div>
-        <div class="p-card-desc">New consultation booking in Google Sheets auto-creates a detailed Google Calendar event and fires a Slack notification to the team — no manual scheduling needed.</div>
-        <div class="p-card-tools" style="margin-top:auto;padding-top:16px">
+        <div class="p-card-desc">When a consultation is booked and logged in Google Sheets, a detailed Google Calendar event is created automatically — with customer name, time, and notes pre-filled. The team is notified on Slack the moment it's done. No manual scheduling. No missed appointments.</div>
+        <div style="margin-top:14px;padding:14px;background:var(--surface2);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:8px">The problem it solves</div>
+          <p style="font-size:.76rem;color:var(--muted);line-height:1.6">Consultation bookings were being manually added to calendars — appointments got missed, teams weren't notified, and scheduling conflicts were common. This workflow removes the human error entirely.</p>
+        </div>
+        <div class="p-card-tools" style="margin-top:16px">
           <span class="p-tool">Google Sheets</span>
           <span class="p-tool">Google Calendar</span>
           <span class="p-tool">Slack</span>
         </div>
       </div>
-      <div class="p-card-flow" style="padding:16px 24px">
-        <div class="flow-node-sm"><span class="fns-icon">📊</span><div><div class="fns-label">Sheets</div></div></div>
-        <div class="flow-arr">→</div>
-        <div class="flow-node-sm"><span class="fns-icon">📅</span><div><div class="fns-label">Calendar</div></div></div>
-        <div class="flow-arr">→</div>
-        <div class="flow-node-sm"><span class="fns-icon">💬</span><div><div class="fns-label">Slack</div></div></div>
+      <div class="wf-diagram" style="padding:20px 24px">
+        <div class="wf-diagram-title">Workflow Diagram</div>
+        <div class="wf-steps">
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap trigger"><span class="wf-step-num">1</span>📊</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Sheets</div>
+              <div class="wf-step-sub">New consultation booking row added</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap"><span class="wf-step-num">2</span>📅</div>
+              <div class="wf-v-line"></div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Google Calendar</div>
+              <div class="wf-step-sub">Detailed event auto-created with customer name, time and notes</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-left">
+              <div class="wf-step-icon-wrap output"><span class="wf-step-num">3</span>💬</div>
+            </div>
+            <div class="wf-step-content">
+              <div class="wf-step-label">Slack</div>
+              <div class="wf-step-sub">Team notified instantly about new consultation</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="impact-row cols-2">
         <div class="impact-cell" style="padding:16px 20px">
           <span class="ic-icon">📅</span>
-          <div><div class="ic-num" style="font-size:1.1rem">Auto</div><div class="ic-lbl">Event created</div></div>
+          <div><div class="ic-num" style="font-size:1.1rem">Zero</div><div class="ic-lbl">Manual scheduling needed</div></div>
         </div>
         <div class="impact-cell" style="padding:16px 20px">
           <span class="ic-icon">🔔</span>
-          <div><div class="ic-num" style="font-size:1.1rem">Instant</div><div class="ic-lbl">Team notified</div></div>
+          <div><div class="ic-num" style="font-size:1.1rem">Instant</div><div class="ic-lbl">Team notified on booking</div></div>
         </div>
       </div>
     </div>
 
-    <!-- ── PROJECT 6 — FEATURED — AI INTERIOR QUOTATION GENERATOR ── -->
-    <!-- FILLER CARD - COMING SOON -->
-    <div class="p-card third" style="border-style:dashed;background:var(--surface2);cursor:default" data-tool="none">
-      <div class="p-card-top" style="justify-content:center;align-items:center;text-align:center;min-height:220px">
-        <div style="font-size:1.5rem;margin-bottom:12px;opacity:.3">+</div>
-        <div style="font-size:.8rem;color:var(--faint);font-weight:500">Currently building</div>
-        <div style="font-size:.72rem;color:var(--faint);margin-top:8px;opacity:.7;line-height:1.6">AI Sales Follow-Up Generator —<br>3 follow-up email versions generated automatically from lead context</div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -1048,16 +1665,13 @@ footer{
 </footer>
 
 <script>
+// ── FILTER ──
 function filterProjects(type, btn) {
-  // update button states
-  document.querySelectorAll('.filter-btn').forEach(b => {
-    b.className = 'filter-btn';
-  });
+  document.querySelectorAll('.filter-btn').forEach(b => { b.className = 'filter-btn'; });
   if(type==='all') btn.classList.add('active-all');
   else if(type==='make') btn.classList.add('active-make');
   else if(type==='zapier') btn.classList.add('active-zapier');
 
-  // show/hide cards
   document.querySelectorAll('.p-card').forEach(card => {
     const tool = card.dataset.tool;
     if(type==='all' || tool===type || tool==='none') {
@@ -1068,7 +1682,44 @@ function filterProjects(type, btn) {
     }
   });
 }
-</script>
 
+// ── TYPEWRITER ──
+const phrases = [
+  'lead routing.',
+  'CRM workflows.',
+  'sales follow-ups.',
+  'team notifications.',
+  'quote generation.',
+  'manual work away.'
+];
+let pi = 0, ci = 0, deleting = false;
+const el = document.getElementById('tw');
+function type() {
+  if (!el) return;
+  const phrase = phrases[pi];
+  if (!deleting) {
+    el.textContent = phrase.slice(0, ci + 1);
+    ci++;
+    if (ci === phrase.length) { deleting = true; setTimeout(type, 1800); return; }
+  } else {
+    el.textContent = phrase.slice(0, ci - 1);
+    ci--;
+    if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+  }
+  setTimeout(type, deleting ? 45 : 80);
+}
+setTimeout(type, 900);
+
+// ── SCROLL FADE-IN ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.p-card').forEach(c => observer.observe(c));
+</script>
 </body>
 </html>
