@@ -1,32 +1,772 @@
-<section id="projects" class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12">Custom AI Agent Ecosystems</h2>
-        <div class="grid lg:grid-cols-2 gap-12">
-            
-            <div class="card p-8 rounded-2xl flex flex-col">
-                <div class="mb-6 overflow-hidden rounded-lg border border-slate-700 bg-slate-900">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                        <iframe src="YOUR_LOOM_EMBED_URL" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Lead Intelligence & Routing Agent</h3>
-                <p class="text-slate-400 mb-4">Eliminated manual triage by building an IML-filtered logic engine that routes leads based on intent and value.</p>
-                <a href="YOUR_DIAGRAM_IMAGE_LINK" class="text-blue-400 text-sm font-bold hover:underline">
-                    <i class="fas fa-sitemap mr-2"></i>View Workflow Diagram
-                </a>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badri Narayanan — Sales Leader & AI Automation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#fafaf8;color:#0f0f0f;line-height:1.6}
+html{scroll-behavior:smooth}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid #e8e6e0}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 48px;display:flex;justify-content:space-between;align-items:center;height:56px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#0f0f0f}
+.nav-right{display:flex;align-items:center;gap:28px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{font-size:.75rem;color:#6b6b6b;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#0f0f0f}
+.hero{padding:160px 0 60px;max-width:1400px;margin:0 auto;padding-left:48px;padding-right:48px;text-align:center}
+.hero-overline{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#999;margin-bottom:24px}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:.95;letter-spacing:-.02em;color:#0f0f0f;margin-bottom:12px}
+.hero-subtitle{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,2rem);font-weight:700;font-style:italic;color:#6b6b6b;margin-bottom:40px;line-height:1.2}
+.hero-bio{font-size:.95rem;line-height:1.85;color:#4a4a4a;max-width:800px;margin:0 auto 0;text-align:left}
+.section{max-width:1400px;margin:0 auto;padding:80px 48px}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:48px}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:56px}
+.p-card{background:#fff;border:1px solid #e8e6e0;border-radius:16px;overflow:hidden;transition:all .25s}
+.p-card:hover{border-color:#d4d0c8;box-shadow:0 12px 48px rgba(0,0,0,.08)}
+.p-card-header{padding:40px 48px;background:linear-gradient(135deg, #f9f8f6 0%, #f4f3ef 100%);border-bottom:1px solid #e8e6e0}
+.p-card-meta{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.p-card-num{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:#999;font-weight:500}
+.p-card-badges{display:flex;gap:6px;flex-wrap:wrap}
+.tool-badge{padding:4px 11px;border-radius:5px;font-size:.65rem;font-weight:600;letter-spacing:.03em}
+.badge-n8n{background:#fff9f4;color:#ff7d23;border:1px solid #ffe4cc}
+.badge-make{background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe}
+.badge-zapier{background:#fff7f5;color:#ff4a00;border:1px solid #ffcbb5}
+.badge-status{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.p-card-title{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin-bottom:0;color:#0f0f0f;font-size:1.4rem}
 
-            <div class="card p-8 rounded-2xl flex flex-col">
-                <div class="mb-6 overflow-hidden rounded-lg border border-slate-700 bg-slate-900 flex items-center justify-center" style="min-height: 200px;">
-                    <img src="YOUR_DIAGRAM_IMAGE_LINK" alt="Workflow Diagram" class="opacity-80 hover:opacity-100 transition">
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Cross-Functional Workflow Agent</h3>
-                <p class="text-slate-400 mb-4">A department-agnostic solution for automating repetitive administrative logic using Google AI Studio.</p>
-                <a href="YOUR_LOOM_VIDEO_LINK" class="text-blue-400 text-sm font-bold hover:underline">
-                    <i class="fas fa-play-circle mr-2"></i>Watch Demo Video
-                </a>
-            </div>
+/* PROBLEM STATEMENT */
+.problem-box{background:#fff;border-left:4px solid #ff7d23;padding:28px 32px;margin:0 48px 40px;border-radius:8px}
+.problem-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:#ff7d23;font-weight:700;margin-bottom:10px}
+.problem-text{font-size:.95rem;color:#4a4a4a;line-height:1.85;font-weight:500}
 
-        </div>
-    </div>
-</section>
+/* ARCHITECTURE SECTION */
+.arch-section{padding:0 48px 40px}
+.arch-title{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:32px;font-weight:600}
+.layers{display:grid;grid-template-columns:1fr;gap:20px}
+.layer{padding:28px;background:linear-gradient(135deg, #fafaf8 0%, #f4f3ef 100%);border-radius:12px;border-left:4px solid #0f0f0f;position:relative}
+.layer.data{border-left-color:#4d46eb}
+.layer.ai{border-left-color:#ff7d23}
+.layer.execution{border-left-color:#16a34a}
+.layer.communication{border-left-color:#6d28d9}
+.layer-label{font-size:.70rem;letter-spacing:.14em;text-transform:uppercase;color:#999;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.layer-label::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor}
+.layer-items{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:20px}
+.layer-item{display:flex;gap:14px;padding:16px;background:#fff;border-radius:8px;border:1px solid #e8e6e0}
+.layer-item-icon{font-size:1.4rem;flex-shrink:0;line-height:1}
+.layer-item-content{flex:1;min-width:0}
+.layer-item-title{font-weight:600;color:#0f0f0f;margin-bottom:4px;font-size:.9rem}
+.layer-item-desc{font-size:.8rem;color:#6b6b6b;line-height:1.6}
+
+/* IMPACT METRICS */
+.impact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e8e6e0;border-top:1px solid #e8e6e0;margin-top:40px}
+.impact-cell{background:#fff;padding:24px;display:flex;align-items:center;gap:16px}
+.ic-num{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;line-height:1;color:#0f0f0f}
+.ic-lbl{font-size:.75rem;color:#6b6b6b;margin-top:4px;line-height:1.3}
+
+/* LOOM BUTTON */
+.loom-btn{display:inline-flex;align-items:center;gap:7px;padding:12px 24px;border-radius:8px;background:linear-gradient(135deg, #4d46eb 0%, #5b47e8 100%);color:#fff;font-size:.75rem;font-weight:600;text-decoration:none;transition:all .15s;margin:32px 48px 0;border:none;cursor:pointer}
+.loom-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(77,70,235,.3)}
+
+.p-card-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:24px;padding:0 48px}
+.p-tool{padding:6px 13px;border-radius:6px;font-size:.7rem;font-weight:500;background:#f4f3ef;border:1px solid #e8e6e0;color:#4a4a4a}
+
+/* CLOSING */
+.closing{background:linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);border-radius:20px;padding:64px;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;margin:80px 0}
+.closing-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.8vw,2.4rem);font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px}
+.closing-body{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:500px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;background:#fff;color:#0f0f0f;font-size:.8rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:all .2s;flex-shrink:0;border:none;cursor:pointer}
+.cta-btn:hover{background:#f0f0ee;transform:translateY(-1px)}
+footer{border-top:1px solid #e8e6e0;padding:40px 0;margin-top:40px}
+.footer-inner{max-width:1400px;margin:0 auto;padding:0 48px;display:flex;justify-content:space-between;align-items:center}
+.p-card[data-tool="n8n"]{border-top:3px solid #ff7d23}
+.p-card[data-tool="make"]{border-top:3px solid #6d28d9}
+.p-card[data-tool="zapier"]{border-top:3px solid #ff4a00}
+@media(max-width:900px){
+  .hero{padding:120px 24px 60px}
+  .section{padding:60px 24px}
+  .nav-inner{padding:0 24px}
+  .closing{grid-template-columns:1fr;padding:48px 32px}
+  .p-card-header,.problem-box,.arch-section,.p-card-tools,.loom-btn{padding-left:24px;padding-right:24px}
+  .impact-row{grid-template-columns:1fr}
+  .layer-items{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-inner"><div class="nav-logo">Badri Narayanan</div><div class="nav-right"><div class="nav-links"><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/badrinarayanan-s/" target="_blank">LinkedIn ↗</a></div></div></div></nav>
+
+<div class="hero"><div class="hero-overline">AI AGENTS · BUSINESS AUTOMATION · REVOPS</div><h1 class="hero-name">Badri Narayanan</h1><p class="hero-subtitle">Sales Leader & AI Automation</p><p class="hero-bio">11 years leading sales operations across India's top interior design and home furnishing brands. Built a track record optimizing sales funnels, managing multi-city territories, and scaling high-performing teams. Over the past year, I've engineered AI agents and automation systems to solve the exact operational problems I experienced firsthand: delayed lead responses, manual CRM entry, inconsistent consultant assignment, no real-time visibility. Every project below is a production system solving a specific revenue bottleneck using multi-agent orchestration and intelligent workflow automation.</p></div>
+
+<div style="max-width:1400px;margin:0 auto;padding:0 48px;border-bottom:1px solid #e8e6e0"></div>
+
+<section class="section" id="projects"><h2 class="sec-title">AI Automation Projects</h2><p style="font-size:.95rem;color:#6b6b6b;line-height:1.75;max-width:850px;margin-bottom:56px">Eleven production systems. Each solves a specific business problem. Each reduces manual work, accelerates decisions, and delivers measurable results.</p>
+
+<div class="projects-grid">
+
+<!-- P1: FIELD SERVICE ORCHESTRATION -->
+<div class="p-card" data-tool="n8n">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">01 · n8n · Multi-Agent System</div><div class="p-card-badges"><span class="tool-badge badge-n8n">n8n</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">Field Service Orchestration System</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Field service dispatchers manually schedule jobs, assign technicians, plan routes, and review quality — consuming hours of administrative overhead daily. Technicians receive assignments with zero route optimization. Quality reviews happen after work is completed. Management has no real-time visibility into field operations or job completion status.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📊 Data Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Customer Job Request</div><div class="layer-item-desc">New job added to Google Sheets with service type, location, required skills</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">👥</div><div class="layer-item-content"><div class="layer-item-title">Available Technicians</div><div class="layer-item-desc">Real-time technician availability, skills, geographic location, workload</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🤖 AI Agent Layer (3 Parallel Agents)</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🎯</div><div class="layer-item-content"><div class="layer-item-title">Scheduler Agent</div><div class="layer-item-desc">Matches job requirements to technician skills, location, and availability using AI reasoning</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">🗺</div><div class="layer-item-content"><div class="layer-item-title">Route Optimizer Agent</div><div class="layer-item-desc">Calculates optimal route to minimize travel time and distance</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">✅</div><div class="layer-item-content"><div class="layer-item-title">QA Agent</div><div class="layer-item-desc">Auto-evaluates completed work against compliance standards and quality metrics</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">⚙ Execution Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📊</div><div class="layer-item-content"><div class="layer-item-title">Aggregate Outputs</div><div class="layer-item-desc">Consolidates 3 agent outputs into single assignment package</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">✓</div><div class="layer-item-content"><div class="layer-item-title">Technician Receives</div><div class="layer-item-desc">Full job details with optimized route, timeline, and QA expectations</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Communication Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📱</div><div class="layer-item-content"><div class="layer-item-title">Slack Team Alert</div><div class="layer-item-desc">Manager and team notified with assignments, route details, and QA flags</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📊</div><div class="layer-item-content"><div class="layer-item-title">Real-Time Dashboard</div><div class="layer-item-desc">Operations team sees live status: jobs assigned, in-progress, completed</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">n8n</span><span class="p-tool">OpenRouter LLM</span><span class="p-tool">Google Sheets</span><span class="p-tool">Slack</span></div>
+<a href="https://www.loom.com/share/b038b7fe4f2d43568321bd563680a4c5" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">🤖</span><div><div class="ic-num">3 Agents</div><div class="ic-lbl">Execute in parallel</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">⏱</span><div><div class="ic-num">0 Manual</div><div class="ic-lbl">Scheduling daily</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">✅</span><div><div class="ic-num">Real-Time</div><div class="ic-lbl">Visibility & QA</div></div></div>
+</div>
+</div>
+
+<!-- P2: COMPETITOR INTELLIGENCE -->
+<div class="p-card" data-tool="n8n">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">02 · n8n · AI Research Agent</div><div class="p-card-badges"><span class="tool-badge badge-n8n">n8n</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">AI Competitor Intelligence Agent</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Sales and strategy teams spend 5-10 hours weekly tracking competitor activity manually — reading reports, monitoring launches, analyzing campaigns. Information arrives late and inconsistently. Critical market signals are missed. Decision-makers lack timely competitive intelligence to inform go-to-market strategy and pricing decisions.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📅 Data Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">⏰</div><div class="layer-item-content"><div class="layer-item-title">Scheduled Trigger</div><div class="layer-item-desc">Workflow runs on daily/weekly schedule to refresh competitive intelligence</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Competitor List</div><div class="layer-item-desc">Pre-configured list: Livspace, HomeLane, Design Cafe, other industry players</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🔍 AI Research & Analysis Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🌐</div><div class="layer-item-content"><div class="layer-item-title">Tavily Web Search API</div><div class="layer-item-desc">Real-time search for each competitor: news, press releases, social signals, pricing updates</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">💭</div><div class="layer-item-content"><div class="layer-item-title">OpenRouter LLM Analysis</div><div class="layer-item-desc">AI extracts insights: launches, campaigns, pricing changes, customer sentiment, market moves</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">📊 Aggregation Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Consolidate Intelligence</div><div class="layer-item-desc">Combines all competitor data into structured intelligence report with key findings</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Delivery Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📧</div><div class="layer-item-content"><div class="layer-item-title">Email Report</div><div class="layer-item-desc">Formatted intelligence automatically sent to strategy team inbox</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📓</div><div class="layer-item-content"><div class="layer-item-title">Notion Knowledge Base</div><div class="layer-item-desc">Report logged and searchable in centralized competitive intelligence database</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">n8n</span><span class="p-tool">Tavily API</span><span class="p-tool">OpenRouter LLM</span><span class="p-tool">Gmail</span><span class="p-tool">Notion</span></div>
+<a href="https://www.loom.com/share/9215e10db21448c78aa24737ec6c28dd" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">🔄</span><div><div class="ic-num">Real-Time</div><div class="ic-lbl">Market tracking</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">⏱</span><div><div class="ic-num">Hours→Minutes</div><div class="ic-lbl">Research time</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📊</span><div><div class="ic-num">Always</div><div class="ic-lbl">Current intel</div></div></div>
+</div>
+</div>
+
+<!-- P3: AI SALES AGENT -->
+<div class="p-card" data-tool="n8n">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">03 · n8n · Sales Pipeline</div><div class="p-card-badges"><span class="tool-badge badge-n8n">n8n</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">AI Sales Agent — B2B Lead Qualification</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Sales teams receive 100+ leads daily but lack consistent qualification criteria. Leads are manually assessed (slow and error-prone). Qualification decisions are subjective and inconsistent across reps. Outreach emails are generic. High-intent leads go unqualified while low-intent companies get pursued. Sales reps waste hours on unqualified accounts.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📊 Data Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">New Lead from Sheets</div><div class="layer-item-desc">Company name, contact info, industry, initial interest captured in Google Sheets</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🔍 Research & Qualification Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🌐</div><div class="layer-item-content"><div class="layer-item-title">Tavily Company Research</div><div class="layer-item-desc">Searches funding history, employee count, industry signals, recent news, growth trajectory</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">⚖</div><div class="layer-item-content"><div class="layer-item-title">AI Qualification Agent</div><div class="layer-item-desc">Scores lead 0-100 using AI reasoning: budget likelihood, fit, timing, growth signals</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">🎯 Routing & Action Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">✓</div><div class="layer-item-content"><div class="layer-item-title">IF Qualified (75+)</div><div class="layer-item-desc">Generate personalized outreach email based on company research, send via Gmail</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">ELSE Unqualified</div><div class="layer-item-desc">Route to nurture sequence, log to unqualified leads sheet</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Notification & Logging</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Slack Alert</div><div class="layer-item-desc">Sales team notified of qualified leads with AI score, reasoning, and recommendation</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📊</div><div class="layer-item-content"><div class="layer-item-title">Results Logged</div><div class="layer-item-desc">Score and routing decision saved to Google Sheets for pipeline tracking</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">n8n</span><span class="p-tool">Google Sheets</span><span class="p-tool">Tavily API</span><span class="p-tool">OpenRouter LLM</span><span class="p-tool">Gmail</span><span class="p-tool">Slack</span></div>
+<a href="https://www.loom.com/share/74acf73d62c443469281fbae0aca6533" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">✓</span><div><div class="ic-num">Objective</div><div class="ic-lbl">Qualification</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📧</span><div><div class="ic-num">Personalized</div><div class="ic-lbl">Every email</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📊</span><div><div class="ic-num">100% Leads</div><div class="ic-lbl">Qualified</div></div></div>
+</div>
+</div>
+
+<!-- P4: HR RESUME SCREENING -->
+<div class="p-card" data-tool="n8n">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">04 · n8n · HR Automation</div><div class="p-card-badges"><span class="tool-badge badge-n8n">n8n</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">AI Resume Screening Agent</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">HR teams manually screen 50-200+ resumes per job opening, spending 5-10 minutes per resume. Screening is inconsistent (different HR staff have different standards). Great candidates are missed. Qualified candidates wait weeks for responses. The entire screening process consumes 20-40 hours per hire, delaying hiring timelines.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📁 Input Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📄</div><div class="layer-item-content"><div class="layer-item-title">Resume Upload Trigger</div><div class="layer-item-desc">PDF resume uploaded to Google Drive folder for specific job opening</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🔍 Extraction & Analysis Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📄</div><div class="layer-item-content"><div class="layer-item-title">PDF Text Extraction</div><div class="layer-item-desc">Parses PDF resume and extracts readable text content</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">💭</div><div class="layer-item-content"><div class="layer-item-title">AI Skill Extraction</div><div class="layer-item-desc">LLM identifies skills, experience years, role history, certifications, education</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📊</div><div class="layer-item-content"><div class="layer-item-title">Job Description Fetch</div><div class="layer-item-desc">Retrieves job requirements from Google Sheets (must-have skills, nice-to-haves)</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">⚖</div><div class="layer-item-content"><div class="layer-item-title">AI Matching & Scoring</div><div class="layer-item-desc">Compares extracted skills against JD requirements, scores 0-100 with reasoning</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">✅ Shortlisting Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">✓</div><div class="layer-item-content"><div class="layer-item-title">Auto-Shortlist</div><div class="layer-item-desc">Candidates scoring 75+ automatically added to interview shortlist</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Results & Notification</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Slack Alert</div><div class="layer-item-desc">HR team receives shortlist with AI scores, matching rationale, and candidate recommendations</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">n8n</span><span class="p-tool">Google Drive</span><span class="p-tool">PDF Parser</span><span class="p-tool">Google Sheets</span><span class="p-tool">OpenRouter LLM</span><span class="p-tool">Slack</span></div>
+<a href="https://www.loom.com/share/58549f990fc64c14948e0a0733dae6ae" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">⚡</span><div><div class="ic-num">Minutes</div><div class="ic-lbl">vs hours</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">✓</span><div><div class="ic-num">Consistent</div><div class="ic-lbl">Standards</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📝</span><div><div class="ic-num">Reasoned</div><div class="ic-lbl">Decisions</div></div></div>
+</div>
+</div>
+
+<!-- P5: INTERIOR DESIGN LEAD INTELLIGENCE -->
+<div class="p-card" data-tool="n8n">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">05 · n8n · Lead Intelligence</div><div class="p-card-badges"><span class="tool-badge badge-n8n">n8n</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">Interior Design Lead Intelligence System</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Customer form submissions go into shared email with zero assignment logic. No one knows which consultant should handle it. Leads are manually assigned (inconsistent). Customers wait hours for a response. Zero lead qualification happens. Sales team has no visibility into incoming volume or quality. High-intent customers go cold before being contacted.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📝 Capture Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Form Submission Trigger</div><div class="layer-item-desc">Customer submits interior design enquiry with name, location, budget, project scope</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">👥</div><div class="layer-item-content"><div class="layer-item-title">Consultant Database</div><div class="layer-item-desc">Real-time consultant availability, geographic coverage, current workload</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🎯 Intelligence & Assignment Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🎯</div><div class="layer-item-content"><div class="layer-item-title">Round-Robin Assignment</div><div class="layer-item-desc">Evaluates consultant workload and location to assign best fit</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">💭</div><div class="layer-item-content"><div class="layer-item-title">AI Lead Analysis</div><div class="layer-item-desc">Estimates project budget, scope, priority level, and timeline</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">✅ Notification Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Customer WhatsApp</div><div class="layer-item-desc">Instant acknowledgement: assigned consultant name, next steps, follow-up timeline</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📱</div><div class="layer-item-content"><div class="layer-item-title">Consultant Alert</div><div class="layer-item-desc">Assigned consultant receives full lead details with AI-analyzed priority</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">📊 Team Visibility</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Slack Team Alert</div><div class="layer-item-desc">Sales manager and team see all incoming leads with assignments in real-time</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">n8n</span><span class="p-tool">Form Trigger</span><span class="p-tool">Round Robin Logic</span><span class="p-tool">OpenRouter LLM</span><span class="p-tool">Twilio WhatsApp</span><span class="p-tool">Slack</span></div>
+<a href="https://www.loom.com/share/8de13e4f7b4d49ad90afb1a0220c7c44" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">⚡</span><div><div class="ic-num">&lt;5s</div><div class="ic-lbl">Response time</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🎯</span><div><div class="ic-num">Intelligent</div><div class="ic-lbl">Assignment</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📊</span><div><div class="ic-num">Auto</div><div class="ic-lbl">Qualification</div></div></div>
+</div>
+</div>
+
+<!-- P6: AI INTERIOR QUOTATION GENERATOR -->
+<div class="p-card" data-tool="zapier">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">06 · Zapier · Revenue Automation</div><div class="p-card-badges"><span class="tool-badge badge-zapier">Zapier</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">AI-Powered Interior Quotation Generator</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Generating an interior design quotation manually takes 2-4 hours. Consultant must look up material pricing, calculate costs, create document, send email. High-intent customers wait days for quotes and go cold. No standardization — different consultants produce quotes differently. Quality and response time are inconsistent.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📊 Data Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📝</div><div class="layer-item-content"><div class="layer-item-title">Lead Captured</div><div class="layer-item-desc">New lead captured from intake form or CRM system</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">💾</div><div class="layer-item-content"><div class="layer-item-title">Store Lead Data</div><div class="layer-item-desc">Log lead information in Google Sheets for record</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">🔍</div><div class="layer-item-content"><div class="layer-item-title">Lead Data Lookup</div><div class="layer-item-desc">Lookup customer details, product selection, material pricing from Sheets</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🤖 AI Processing Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">⚡</div><div class="layer-item-content"><div class="layer-item-title">Zapier AI Analysis</div><div class="layer-item-desc">Analyzes customer data and generates structured quotation with Budget & Standard tiers</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">📄 Document Generation</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Create Quote Document</div><div class="layer-item-desc">Auto-generates personalized quote in branded Google Docs template</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Delivery & Notification</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📧</div><div class="layer-item-content"><div class="layer-item-title">Send to Customer</div><div class="layer-item-desc">Quotation automatically emailed to customer with call-to-action</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Notify Sales Team</div><div class="layer-item-desc">Slack alert to sales/ops team with quote details for follow-up</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">Google Forms</span><span class="p-tool">Google Sheets</span><span class="p-tool">Zapier AI</span><span class="p-tool">Google Docs</span><span class="p-tool">Gmail</span><span class="p-tool">Slack</span></div>
+<a href="https://www.loom.com/share/a6199d7263f34972aeb60393b1c345a0" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">⚡</span><div><div class="ic-num">&lt;8s</div><div class="ic-lbl">Quote ready</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">✦</span><div><div class="ic-num">2 Versions</div><div class="ic-lbl">Budget + Premium</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🔗</span><div><div class="ic-num">7 Apps</div><div class="ic-lbl">Integrated</div></div></div>
+</div>
+</div>
+
+<!-- P7: AI SOCIAL MEDIA INTELLIGENCE -->
+<div class="p-card" data-tool="make">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">07 · Make.com · Social Intelligence</div><div class="p-card-badges"><span class="tool-badge badge-make">Make.com</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">AI Social Media Intelligence System (Orbit Engine)</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Social media teams spend 4-6 hours daily monitoring mentions, identifying trends, brainstorming content across LinkedIn, Twitter, and Instagram. Information is scattered. Content ideas are inconsistent. By the time content is created, trends have already passed. No data-driven basis for prioritizing which content to create.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">⏰ Trigger Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📅</div><div class="layer-item-content"><div class="layer-item-title">Daily Schedule Trigger</div><div class="layer-item-desc">Workflow automatically executes daily to refresh social intelligence</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">🔗</div><div class="layer-item-content"><div class="layer-item-title">Platform APIs Connected</div><div class="layer-item-desc">LinkedIn, Twitter, Instagram APIs configured for data access</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🤖 Parallel Agent Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">👂</div><div class="layer-item-content"><div class="layer-item-title">Listener Agent</div><div class="layer-item-desc">Monitors brand mentions and customer sentiment across all 3 platforms</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📊</div><div class="layer-item-content"><div class="layer-item-title">Topic Agent</div><div class="layer-item-desc">Identifies trending industry topics and market signals</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">✍</div><div class="layer-item-content"><div class="layer-item-title">Creator Agent</div><div class="layer-item-desc">Generates platform-specific content ideas with captions for LinkedIn, Twitter, Instagram</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">📊 Aggregation & Analysis</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Consolidate Results</div><div class="layer-item-desc">Combines insights from 3 agents into actionable intelligence</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Delivery</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Slack Alerts</div><div class="layer-item-desc">Team receives daily intelligence with content recommendations</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📓</div><div class="layer-item-content"><div class="layer-item-title">Notion Calendar</div><div class="layer-item-desc">Content calendar auto-updated with AI-generated content ideas</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">Make.com</span><span class="p-tool">LinkedIn API</span><span class="p-tool">Twitter API</span><span class="p-tool">Instagram API</span><span class="p-tool">OpenRouter LLM</span><span class="p-tool">Slack</span><span class="p-tool">Notion</span></div>
+<a href="https://www.loom.com/share/0592fa2330ce46d6b40807590a0a6c76" target="_blank" class="loom-btn"><span>▶</span> Watch Full Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">🌐</span><div><div class="ic-num">3 Platforms</div><div class="ic-lbl">Monitored</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🤖</span><div><div class="ic-num">3 Agents</div><div class="ic-lbl">Parallel</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📝</span><div><div class="ic-num">Daily</div><div class="ic-lbl">Content ideas</div></div></div>
+</div>
+</div>
+
+<!-- P8: INTERIOASSIST AI -->
+<div class="p-card">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">08 · Python · AI Product</div><div class="p-card-badges"><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">InterioAssist AI — Dual-Domain Expert Assistant</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Customers need expert guidance on interior design (layouts, materials, Vastu, budgets) but experts aren't always available. Sales teams need instant access to performance analytics (funnel analysis, conversion metrics, team performance). Knowledge is scattered across systems. Getting expert answers takes time.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">🎨 Interface Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">User Query</div><div class="layer-item-desc">Customer or team member types question in Gradio chat interface</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📝</div><div class="layer-item-content"><div class="layer-item-title">Chat Memory</div><div class="layer-item-desc">Conversation context retained for coherent multi-turn dialogue</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🤖 Domain Detection & Expertise</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🔀</div><div class="layer-item-content"><div class="layer-item-title">Domain Classifier</div><div class="layer-item-desc">Identifies: Interior Design query or Sales Analytics query</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">🏠</div><div class="layer-item-content"><div class="layer-item-title">Interior Design Expertise</div><div class="layer-item-desc">Handles room layouts, material specs, Vastu compliance, budget optimization</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📊</div><div class="layer-item-content"><div class="layer-item-title">Sales Analytics Expertise</div><div class="layer-item-desc">Handles funnel analysis, conversion metrics, team performance, revenue insights</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">⚡ LLM Processing</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">⚡</div><div class="layer-item-content"><div class="layer-item-title">Groq Llama-3.1</div><div class="layer-item-desc">Low-latency inference for sub-second response times</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">💬 Response Delivery</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">✓</div><div class="layer-item-content"><div class="layer-item-title">Instant Expert Answer</div><div class="layer-item-desc">Expert-level response delivered in Gradio UI instantly</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">Python</span><span class="p-tool">Groq API</span><span class="p-tool">Llama-3.1</span><span class="p-tool">Gradio</span><span class="p-tool">HuggingFace Spaces</span></div>
+<a href="https://huggingface.co/spaces/Badrii5/interioassist-ai" target="_blank" class="loom-btn" style="background:linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%)"><span>🚀</span> View Live Demo</a>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">✦</span><div><div class="ic-num">2 Domains</div><div class="ic-lbl">Expert</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🚀</span><div><div class="ic-num">Live</div><div class="ic-lbl">Production</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">⚡</span><div><div class="ic-num">Sub-Second</div><div class="ic-lbl">Latency</div></div></div>
+</div>
+</div>
+
+<!-- P9: SMART LEAD ROUTING -->
+<div class="p-card" data-tool="make">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">09 · Make.com · Lead Routing</div><div class="p-card-badges"><span class="tool-badge badge-make">Make.com</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">Smart Lead Routing — CRM Integration</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Interior design leads arrive from different locations and budget tiers but go to shared email. No intelligent routing logic. Leads sit unassigned. Budget-based assignment is manual guesswork. No centralized CRM record. Sales team has no visibility into lead distribution or team workload.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📊 Input Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">New Lead Entry</div><div class="layer-item-desc">Lead added to Google Sheets with customer info, location, budget tier</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🎯 Routing Intelligence</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🔀</div><div class="layer-item-content"><div class="layer-item-title">4-Condition Router</div><div class="layer-item-desc">Evaluates: Location (A/B/C) × Budget (Premium/Standard) = 4 intelligent routing paths</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">💬 Assignment & CRM Sync</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Route to Slack</div><div class="layer-item-desc">Lead sent to appropriate team channel with full context</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">🗂</div><div class="layer-item-content"><div class="layer-item-title">Auto-Create HubSpot Contact</div><div class="layer-item-desc">Contact auto-created in CRM with budget tier, location, and team tags</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">✓ Visibility</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">✓</div><div class="layer-item-content"><div class="layer-item-title">Zero Manual Work</div><div class="layer-item-desc">Lead routing + CRM contact creation completely automated</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">Google Sheets</span><span class="p-tool">Make Router</span><span class="p-tool">Slack</span><span class="p-tool">HubSpot CRM</span></div>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">🎯</span><div><div class="ic-num">4 Routes</div><div class="ic-lbl">Conditions</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🗂</span><div><div class="ic-num">Auto</div><div class="ic-lbl">CRM Sync</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">⚡</span><div><div class="ic-num">Instant</div><div class="ic-lbl">Routing</div></div></div>
+</div>
+</div>
+
+<!-- P10: AUTOMOTIVE LEAD DISTRIBUTION -->
+<div class="p-card" data-tool="make">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">10 · Make.com · Vehicle Routing</div><div class="p-card-badges"><span class="tool-badge badge-make">Make.com</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">Automotive Lead Distribution</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Dealership receives leads for three vehicle types (Passenger, Commercial, Electric) but all land in one system. No automatic type-based routing. Wrong specialist gets wrong lead. Branch manager has zero visibility into lead flow. Leads sit unassigned while specialists manually hunt for them.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📄 Input Layer</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">New Lead Entry</div><div class="layer-item-desc">Lead submitted with vehicle type information</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🚗 Vehicle Intelligence</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">🔍</div><div class="layer-item-content"><div class="layer-item-title">Vehicle Type Detection</div><div class="layer-item-desc">Identifies: Passenger vehicle, Commercial vehicle, or Electric vehicle</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">💬 Specialist Routing</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">💬</div><div class="layer-item-content"><div class="layer-item-title">Route to Team Channel</div><div class="layer-item-desc">Sends to Passenger/Commercial/Electric specialist team Slack channel</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">👔 Manager Visibility</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">👔</div><div class="layer-item-content"><div class="layer-item-title">Silent Manager Copy</div><div class="layer-item-desc">Branch manager also receives notification on private channel for oversight</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">Google Sheets</span><span class="p-tool">Make Router</span><span class="p-tool">Slack</span></div>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">🚗</span><div><div class="ic-num">3</div><div class="ic-lbl">Vehicle routes</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🔒</span><div><div class="ic-num">Manager</div><div class="ic-lbl">Visibility</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">⚡</span><div><div class="ic-num">Instant</div><div class="ic-lbl">Routing</div></div></div>
+</div>
+</div>
+
+<!-- P11: EMAIL SUMMARIZER -->
+<div class="p-card" data-tool="zapier">
+<div class="p-card-header">
+<div class="p-card-meta"><div class="p-card-num">11 · Zapier · Knowledge Base</div><div class="p-card-badges"><span class="tool-badge badge-zapier">Zapier</span><span class="tool-badge badge-status">Live</span></div></div>
+<h3 class="p-card-title">Email Summarizer — Knowledge Logger</h3>
+</div>
+
+<div class="problem-box">
+<div class="problem-label">🎯 The Problem</div>
+<div class="problem-text">Sales leaders and operations managers spend 3-5 hours weekly reading emails, extracting decisions, remembering action items. Email overload. Critical information gets buried. No searchable record. New team members don't know what was discussed. Onboarding takes weeks because context is scattered across hundreds of emails.</div>
+</div>
+
+<div class="arch-section">
+<div class="arch-title">System Architecture: How It Works</div>
+<div class="layers">
+
+<div class="layer data">
+<div class="layer-label">📧 Email Input</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📧</div><div class="layer-item-content"><div class="layer-item-title">New Email Received</div><div class="layer-item-desc">Message arrives in Gmail inbox</div></div></div>
+</div>
+</div>
+
+<div class="layer ai">
+<div class="layer-label">🤖 AI Analysis & Extraction</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">⚡</div><div class="layer-item-content"><div class="layer-item-title">Zapier AI Processing</div><div class="layer-item-desc">Reads email content and identifies key information, decisions, action items</div></div></div>
+<div class="layer-item"><div class="layer-item-icon">📋</div><div class="layer-item-content"><div class="layer-item-title">Extract & Structure</div><div class="layer-item-desc">Extracts summary, key decisions, next steps, meeting participants</div></div></div>
+</div>
+</div>
+
+<div class="layer execution">
+<div class="layer-label">💾 Storage</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">📓</div><div class="layer-item-content"><div class="layer-item-title">Save to Notion Database</div><div class="layer-item-desc">Structured entry created in knowledge base with tags and metadata</div></div></div>
+</div>
+</div>
+
+<div class="layer communication">
+<div class="layer-label">🔍 Knowledge Access</div>
+<div class="layer-items">
+<div class="layer-item"><div class="layer-item-icon">✓</div><div class="layer-item-content"><div class="layer-item-title">Searchable Knowledge Base</div><div class="layer-item-desc">Team instantly searches and finds context on any topic or decision</div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="p-card-tools"><span class="p-tool">Gmail</span><span class="p-tool">Zapier AI</span><span class="p-tool">Notion</span></div>
+
+<div class="impact-row">
+<div class="impact-cell"><span style="font-size:1.4rem">✦</span><div><div class="ic-num">AI</div><div class="ic-lbl">Analysis</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">📓</span><div><div class="ic-num">Auto</div><div class="ic-lbl">Logged</div></div></div>
+<div class="impact-cell"><span style="font-size:1.4rem">🔍</span><div><div class="ic-num">Instantly</div><div class="ic-lbl">Searchable</div></div></div>
+</div>
+</div>
+
+</div></section>
+
+<div style="max-width:1400px;margin:0 auto;padding:0 48px;border-bottom:1px solid #e8e6e0"></div>
+
+<section class="section" id="contact"><div class="closing"><div><div class="closing-title">Built to eliminate manual work.</div><p class="closing-body">Eleven production systems that reduce errors, accelerate decisions, and deliver measurable business results. Available for technical discussions on system design, automation strategy, and implementation challenges.</p></div><a class="cta-btn" href="mailto:badrisrinivas555@gmail.com">Get in Touch →</a></div></section>
+
+<footer><div class="footer-inner"><div style="font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:#0f0f0f">Badri Narayanan</div><div style="display:flex;gap:20px"><a href="https://www.linkedin.com/in/badrinarayanan-s/" target="_blank" style="font-size:.75rem;color:#999;text-decoration:none">LinkedIn ↗</a><a href="mailto:badrisrinivas555@gmail.com" style="font-size:.75rem;color:#999;text-decoration:none">Email</a></div></div></footer>
+
+</body>
+</html>
